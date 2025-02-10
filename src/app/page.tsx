@@ -1,23 +1,29 @@
 import Navbar from "@/components/navbar";
 import Hero from "@/components/hero";
 import FeaturedAuctions from "@/components/FeaturedAuctions";
-import PricingPlans from "@/components/pricinPlan";
 import Testimonials from "@/components/testimonalsection";
 import HowItWorks from "@/components/worksection";
 import Statistics from "@/components/statics";
-import CtaFooter from "@/components/footer";
+import HotAuctionMakes from "@/components/hotauction";
+import VehicleTypes from "@/components/vehicletypes";
+
 
 export default function Home() {
   return (
     <>
-      <Navbar />
+      
       <Hero />
       <FeaturedAuctions />
-      <PricingPlans/>
-      <Testimonials/>
       <HowItWorks/>
+      <Testimonials/>
       <Statistics/>
-      <CtaFooter/>
+      <HotAuctionMakes/>
+      <VehicleTypes/>
+      
+     
+      
+
+      
     </>
   );
 }
