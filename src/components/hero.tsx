@@ -41,7 +41,7 @@ const Hero = () => {
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-        className="w-full h-full"
+        className="w-full h-full "
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>

@@ -33,12 +33,12 @@ const Navbar = () => {
     <nav className="fixed w-full top-0 z-50 bg-white dark:bg-gray-900 shadow-md border-b border-gray-200 dark:border-gray-700 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center h-16">
         {/* LOGO */}
-        <Link href="/" className="text-2xl font-bold text-gray-900 dark:text-white tracking-wide">
+        <Link href="/" className="text-2xl font-bold text-gray-900 dark:text-white tracking-wide pr-4">
           🚗 <span className="text-blue-600 dark:text-yellow-400">Car</span>Auction
         </Link>
 
         {/* SEARCH BAR (Hidden on small screens) */}
-        <div className="hidden md:flex flex-grow justify-center">
+        <div className="hidden md:flex flex-grow justify-center pr-3">
           <div className="relative w-full max-w-md">
             <Search className="absolute left-3 top-3 text-gray-500 dark:text-gray-400" size={20} />
             <Input
@@ -51,8 +51,10 @@ const Navbar = () => {
 
         {/* NAVIGATION & BUTTONS */}
         <div className="hidden md:flex items-center space-x-6">
-          <Link href="/about" className="hover:text-blue-600 dark:hover:text-yellow-400 transition">About Us</Link>
-          <Link href="/contact" className="hover:text-blue-600 dark:hover:text-yellow-400 transition">Contact Us</Link>
+        <Link href="/userdashboard" className="hover:text-blue-600 dark:hover:text-yellow-400 transition">Dashboard</Link>
+
+          <Link href="/aboutus" className="hover:text-blue-600 dark:hover:text-yellow-400 transition">About Us</Link>
+          <Link href="/contactus" className="hover:text-blue-600 dark:hover:text-yellow-400 transition">Contact Us</Link>
           <button onClick={() => setDarkMode(!darkMode)} className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition">
             {darkMode ? <Sun size={20} className="text-yellow-400" /> : <Moon size={20} className="text-gray-800" />}
           </button>

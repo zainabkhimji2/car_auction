@@ -11,6 +11,7 @@ import "swiper/css/pagination";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Heart, Clock, Gavel, ChevronLeft, ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 const auctionData = [
   {
@@ -123,15 +124,16 @@ const FeatureAuction = () => {
 
                   {/* Auction Status Badge */}
                   <Badge
-                    className={`absolute top-3 left-3 text-xs px-3 py-1 ${
-                      auction.status === "Live" ? "bg-red-500 text-white" : "bg-gray-500 dark:bg-gray-700 text-white"
-                    }`}
-                  >
-                    {auction.status}
-                  </Badge>
+  className={`absolute top-3 left-3 z-10 text-xs font-bold px-3 py-1 rounded-md shadow-md ${
+    auction.status === "Live" ? "bg-red-500 text-white" : "bg-gray-500 dark:bg-gray-700 text-white"
+  }`}
+>
+  {auction.status}
+</Badge>
+
 
                   {/* Heart Button */}
-                  <button className="absolute top-3 right-3 bg-white dark:bg-gray-800 p-2 rounded-full shadow-md hover:scale-110 transition">
+                  <button className="absolute top-3 right-3 bg-white dark:bg-gray-800 p-2 rounded-full shadow-md hover:scale-110 transition z-10">
                     <Heart className="text-red-500" size={18} />
                   </button>
                 </div>
@@ -145,9 +147,10 @@ const FeatureAuction = () => {
                       <Clock size={18} />
                       {auction.endTime}
                     </span>
-                    <Button className="bg-blue-600 dark:bg-yellow-400 text-white dark:text-gray-900 px-4 py-2 hover:scale-105 transition">
+                    <Link href="/cardetails"><Button className="bg-blue-600 dark:bg-yellow-400 text-white dark:text-gray-900 px-4 py-2 hover:scale-105 transition">
                       <Gavel size={18} /> Bid Now
-                    </Button>
+                    </Button></Link>
+                    
                   </div>
                 </div>
               </motion.div>
